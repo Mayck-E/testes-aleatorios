@@ -1,4 +1,4 @@
-fetch('http://localhost:3001/produtos')
+fetch('http://187.39.84.241:3001/produtos')
     .then(response => response.json())
     .then(data => {
         var divProdutos = document.getElementById('produtos');
@@ -17,35 +17,35 @@ fetch('http://localhost:3001/produtos')
 
 
     
-// document.getElementById('cadastroForm').addEventListener('submit', function(event) {
-//     event.preventDefault();
+document.getElementById('cadastroForm').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-//     // Coleta dos dados do formulário
-//     var dados = {
-//         nome: document.getElementById('nome').value,
-//         email: document.getElementById('email').value,
-//         senha: document.getElementById('senha').value,
-//         logradouro: document.getElementById('logradouro').value,
-//         numero: document.getElementById('numero').value,
-//         bairro: document.getElementById('bairro').value,
-//         cidade: document.getElementById('cidade').value,
-//         uf: document.getElementById('uf').value,
-//         cep: document.getElementById('cep').value
-//     };
+    // Coleta dos dados do formulário
+    var dados = {
+        nome: document.getElementById('nome').value,
+        email: document.getElementById('email').value,
+        senha: document.getElementById('senha').value,
+        logradouro: document.getElementById('logradouro').value,
+        numero: document.getElementById('numero').value,
+        bairro: document.getElementById('bairro').value,
+        cidade: document.getElementById('cidade').value,
+        uf: document.getElementById('uf').value,
+        cep: document.getElementById('cep').value
+    };
 
-//     // Configuração da solicitação POST
-//     var xhr = new XMLHttpRequest();
-//     xhr.open('POST', 'http://localhost:3001/clientes', true);
-//     xhr.setRequestHeader('Content-Type', 'application/json');
+    // Configuração da solicitação POST
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'http://localhost:3001/clientes', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
 
-//     xhr.onload = function () {
-//         if (xhr.status === 200) {
-//             alert('Cadastro realizado com sucesso!');
-//         } else {
-//             alert('Erro no cadastro: ' + xhr.status);
-//         }
-//     };
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            alert('Cadastro realizado com sucesso!');
+        } else {
+            alert('Erro no cadastro: ' + xhr.status);
+        }
+    };
 
-//     // Enviar a solicitação para a API
-//     xhr.send(JSON.stringify(dados));
-// });
+    // Enviar a solicitação para a API
+    xhr.send(JSON.stringify(dados));
+});
