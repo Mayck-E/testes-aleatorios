@@ -1,4 +1,4 @@
-fetch('http://187.39.84.241:3001/produtos')
+fetch('http://localhost:3001/produtos')
     .then(response => response.json())
     .then(data => {
         var divProdutos = document.getElementById('produtos');
